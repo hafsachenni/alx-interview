@@ -14,11 +14,14 @@ status = {
 }
 
 total_size = [0]
+
+
 def print_metrics():
     print("File size: {}".format(sum(total_size)))
     for code, count in sorted(status.items()):
         if count:
             print("{}: {}".format(code, count))
+
 
 try:
     for a, line in enumerate(sys.stdin, start=1):
